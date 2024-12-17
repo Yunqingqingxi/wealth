@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">presentation</string>
+    <string name="username_or_email">用户名/邮箱</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="email">邮箱</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="register_now">立即注册</string>
+    <string name="back_to_login">返回登录</string>
+    <string name="next_step">下一步</string>
 </resources>

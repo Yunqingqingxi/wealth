@@ -35,4 +35,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // Gson
+    implementation(libs.gson)
+    // PDF处理
+    implementation ("com.itextpdf:itext7-core:7.2.5")
+    // Word处理
+    implementation ("org.apache.poi:poi:5.2.3")
+    implementation ("org.apache.poi:poi-ooxml:5.2.3")
+    // HTML处理（用于中间转换）
+    implementation ("org.jsoup:jsoup:1.15.4")
+
 }

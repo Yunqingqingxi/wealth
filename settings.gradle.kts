@@ -30,9 +30,10 @@ dependencyResolutionManagement {
 rootProject.name = "wealth"
 include(":app")
 
-include(":app:domain")
-include(":app:data")
 include(":app:presentation")
 include(":app:network")
 include(":app:common")
-include(":app:di")
+include(":app:network:FinanceUser")
+include(":app:network:FinanceRecord")
+include(":app:network:FinanceStats")
+include(":app:network:FinanceBudget")
