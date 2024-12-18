@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VIP卡片 -->
+    <item name="card_vip" type="id"/>
+    
+    <!-- 功能按钮 -->
+    <item name="btn_notification" type="id"/>
+    <item name="btn_badge" type="id"/>
+    <item name="btn_points" type="id"/>
+    <item name="btn_invite" type="id"/>
+    <item name="btn_settings" type="id"/>
+    
+    <!-- 菜单项 -->
+    <item name="menu_account" type="id"/>
+    <item name="menu_family" type="id"/>
+    <item name="menu_security" type="id"/>
+    <item name="menu_help" type="id"/>
+    <item name="menu_feedback" type="id"/>
+    <item name="menu_rate" type="id"/>
+    <item name="menu_about" type="id"/>
+</resources> 

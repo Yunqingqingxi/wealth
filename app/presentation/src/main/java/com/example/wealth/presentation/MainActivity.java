@@ -1,43 +1,91 @@
 package com.example.wealth.presentation;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private LinearLayout navDetail, navChart, navDiscover, navProfile;
+    private ImageView ivDetail, ivChart, ivDiscover, ivProfile;
+    private TextView tvDetail, tvChart, tvDiscover, tvProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-//        // 检查登录状态
-//        if (!isLoggedIn()) {
-//            // 未登录，跳转到登录界面
-//            Intent intent = new Intent(this, LoginActivity.class);
-//            startActivity(intent);
-//            finish(); // 结束当前 Activity
-//            return;
-//        }
-        
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        initViews();
+        setupListeners();
+        
+        // 默认选中明细
+        updateNavSelection(navDetail);
+        
+        // 默认显示明细页面
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new DetailFragment())
+                .commit();
+    }
+
+    private void initViews() {
+        navDetail = findViewById(R.id.nav_detail);
+        navChart = findViewById(R.id.nav_chart);
+        navDiscover = findViewById(R.id.nav_discover);
+        navProfile = findViewById(R.id.nav_profile);
+
+        ivDetail = findViewById(R.id.iv_detail);
+        ivChart = findViewById(R.id.iv_chart);
+        ivDiscover = findViewById(R.id.iv_discover);
+        ivProfile = findViewById(R.id.iv_profile);
+
+        tvDetail = findViewById(R.id.tv_detail);
+        tvChart = findViewById(R.id.tv_chart);
+        tvDiscover = findViewById(R.id.tv_discover);
+        tvProfile = findViewById(R.id.tv_profile);
+    }
+
+    private void setupListeners() {
+        navDetail.setOnClickListener(v -> {
+            updateNavSelection(navDetail);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new DetailFragment())
+                    .commit();
+        });
+
+        navChart.setOnClickListener(v -> {
+            updateNavSelection(navChart);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new ChartFragment())
+                    .commit();
+        });
+
+        navDiscover.setOnClickListener(v -> {
+            updateNavSelection(navDiscover);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new DiscoverFragment())
+                    .commit();
+        });
+
+        navProfile.setOnClickListener(v -> {
+            updateNavSelection(navProfile);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new ProfileFragment())
+                    .commit();
         });
     }
-    
-    /**
-     * 检查是否已登录
-     * 这里先使用 SharedPreferences 简单实现，后续可以改用更安全的方式
-     */
-    private boolean isLoggedIn() {
-        return getSharedPreferences("app_prefs", MODE_PRIVATE)
-            .getBoolean("is_logged_in", false);
+
+    private void updateNavSelection(View selectedNav) {
+        // 重置所有导航项
+        navDetail.setSelected(false);
+        navChart.setSelected(false);
+        navDiscover.setSelected(false);
+        navProfile.setSelected(false);
+
+        // 设置选中项
+        selectedNav.setSelected(true);
     }
 }
