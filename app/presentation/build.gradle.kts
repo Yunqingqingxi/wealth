@@ -52,6 +52,8 @@ dependencies {
     
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(project(":app:network:FinanceUser"))
+    implementation(project(":app:network"))
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     
     // MPAndroidChart - 使用正确的依赖路径
@@ -65,4 +67,9 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // Retrofit + OkHttp
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.core)
+    implementation(libs.okhttp.logging)
 }
