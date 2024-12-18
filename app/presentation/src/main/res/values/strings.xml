@@ -1,13 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">presentation</string>
-    <string name="username_or_email">用户名/邮箱</string>
-    <string name="username">用户名</string>
-    <string name="password">密码</string>
-    <string name="email">邮箱</string>
-    <string name="confirm_password">确认密码</string>
+    <!-- 应用名称 -->
+    <string name="app_name">记账助手</string>
+    
+    <!-- 按钮文本 -->
     <string name="login">登录</string>
     <string name="register">注册</string>
-    <string name="register_now">立即注册</string>
-    <string name="back_to_login">返回登录</string>
     <string name="next_step">下一步</string>
+    
+    <!-- 输入框提示文本 -->
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="email">邮箱</string>
+    
+    <!-- 页面标题 -->
+    <string name="create_account">创建账号</string>
+    <string name="verify_email">验证邮箱</string>
+    
+    <!-- 提示文本 -->
+    <string name="register_now">还没有账号？立即注册</string>
+    <string name="verify_email_desc">请输入您的邮箱地址，我们将向您发送验证码</string>
+    
+    <!-- 错误提示 -->
+    <string name="password_not_match">两次输入的密码不一致</string>
+    <string name="invalid_username">用户名长度应在4-20个字符之间</string>
+    <string name="invalid_password">密码长度应在6-20个字符之间</string>
 </resources>

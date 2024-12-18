@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Material Design主题颜色 -->
+    <color name="colorPrimary">#2196F3</color>    <!-- Material Blue 500 -->
+    <color name="colorPrimaryDark">#1976D2</color> <!-- Material Blue 700 -->
+    <color name="colorAccent">#03A9F4</color>      <!-- Material Light Blue 500 -->
+    
+    <!-- 基础颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <!-- 应用主题色 -->
+    <color name="yellow_primary">#FFE066</color>   <!-- 主黄色 -->
+    <color name="yellow_light">#FFF5D6</color>     <!-- 浅黄色 -->
+    
+    <!-- 文字颜色 -->
+    <color name="text_primary">#1F2937</color>     <!-- 主要文字颜色 -->
+    <color name="text_secondary">#6B7280</color>   <!-- 次要文字颜色 -->
+    <color name="text_hint">#9CA3AF</color>        <!-- 提示文字颜色 -->
+    
+    <!-- 输入框边框颜色 -->
+    <color name="input_stroke">#E5E7EB</color>
 </resources>
