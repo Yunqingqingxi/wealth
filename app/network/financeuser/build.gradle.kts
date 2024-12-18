@@ -32,7 +32,14 @@ dependencies {
 
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(project(":app:network"))
+    implementation(project(":app:common"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // Retrofit + OkHttp
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.core)
+    implementation(libs.okhttp.logging)
 }
