@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 外层浅灰色圆环 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#F5F5F5"/>
+            <size
+                android:width="52dp"
+                android:height="52dp"/>
+        </shape>
+    </item>
+    
+    <!-- 内层白色圆形背景，减小内圆大小以增加圆环粗细 -->
+    <item
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+</layer-list> 
