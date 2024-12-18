@@ -5,6 +5,26 @@
     android:orientation="vertical"
     android:background="@color/background_yellow">
 
+    <!-- 添加标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+
+
+        <!-- 标题文本 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鱼鱼记账"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
     <!-- 顶部日期和收支信息 -->
     <LinearLayout
         android:layout_width="match_parent"
