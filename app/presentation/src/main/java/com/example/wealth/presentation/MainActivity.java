@@ -3,7 +3,7 @@ package com.example.wealth.presentation;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
         setupListeners();
-        
+
         // 默认选中明细
         updateNavSelection(navDetail);
-        
+
         // 默认显示明细页面
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new DetailFragment())

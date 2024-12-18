@@ -3,4 +3,7 @@
     <color name="background_yellow">#FFE94F</color>
     <color name="nav_selected">#FFD700</color>
     <color name="nav_normal">#666666</color>
+    <color name="colorPrimary">#FDD843</color>
+    <color name="colorPrimaryDark">#FDD843</color>
+    <color name="colorAccent">#FDD843</color>
 </resources>

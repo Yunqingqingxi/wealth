@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.wealth.common.utils.DeviceUtils;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
