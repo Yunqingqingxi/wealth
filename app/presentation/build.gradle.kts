@@ -36,11 +36,9 @@ android {
 }
 
 dependencies {
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    implementation(libs.activity)
-    implementation(libs.constraintlayout)
     implementation(project(":app:common"))
+    implementation(project(":app:network"))
+    implementation(project(":app:network:FinanceUser"))
     
     // AndroidX 核心库
     implementation("androidx.core:core-ktx:1.12.0")
@@ -50,21 +48,23 @@ dependencies {
     // Material Design
     implementation("com.google.android.material:material:1.11.0")
     
-    // Glide
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    // ViewPager2
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
     
-    // MPAndroidChart - 使用正确的依赖路径
+    // ConstraintLayout
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    
+    // MPAndroidChart
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     
     // 生命周期组件
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata:2.7.0")
-    
-    // 测试依赖
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    
-    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // 网络相关依赖
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
 }

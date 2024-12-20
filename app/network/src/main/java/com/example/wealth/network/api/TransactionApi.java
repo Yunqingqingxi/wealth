@@ -8,7 +8,11 @@ import com.example.wealth.network.model.response.TransactionInfo;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
+
+import java.util.List;
 
 /**
  * 交易相关API接口
@@ -33,4 +37,17 @@ public interface TransactionApi {
      */
     @POST("/api/categories")
     Call<BaseResponse<CategoryInfo>> addCategory(@Body CategoryRequest request);
+    
+    /**
+     * 获取交易记录列表
+     *
+     * @param page 页码
+     * @param pageSize 每页数量
+     * @return 交易记录列表
+     */
+    @GET("/api/transactions")
+    Call<BaseResponse<List<TransactionInfo>>> getTransactions(
+        @Query("page") int page,
+        @Query("pageSize") int pageSize
+    );
 } 
