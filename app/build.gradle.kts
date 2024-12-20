@@ -39,4 +39,5 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("com.google.android.material:material:1.11.0")
 }
