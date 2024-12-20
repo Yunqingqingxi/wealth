@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Finance app</string>
+    <string name="category_icon">类别图标</string>
 </resources>

@@ -1,5 +1,8 @@
 package com.example.wealth.presentation.model;
 
+import lombok.Data;
+
+@Data
 public class CategoryItem {
     private String name;
     private int iconResId;

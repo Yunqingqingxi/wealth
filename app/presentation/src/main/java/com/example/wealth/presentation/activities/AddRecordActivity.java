@@ -1,21 +1,13 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.activities;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import java.util.Arrays;
-import java.util.List;
-
+import com.example.wealth.presentation.R;
 import com.example.wealth.presentation.adapter.CategoryPagerAdapter;
 
 public class AddRecordActivity extends AppCompatActivity {

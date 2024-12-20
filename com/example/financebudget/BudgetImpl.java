@@ -43,4 +43,4 @@ public class BudgetImpl {
     public Call<BaseResponse<BudgetInfo>> setBudget(BudgetRequest request) {
         return budgetApi.setBudget(request);
     }
-}
+} 

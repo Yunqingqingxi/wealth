@@ -1,4 +1,4 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

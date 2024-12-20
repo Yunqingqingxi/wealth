@@ -1,5 +1,6 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.fragments;
 
+import com.example.wealth.presentation.R;
 import com.example.wealth.presentation.base.BaseCategoryFragment;
 import com.example.wealth.presentation.model.CategoryItem;
 import java.util.Arrays;

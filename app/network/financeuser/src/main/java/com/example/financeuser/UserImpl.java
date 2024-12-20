@@ -17,7 +17,7 @@ import retrofit2.Call;
  * 封装了用户相关的所有网络请求操作，包括注册、登录、信息更新等功能
  */
 public class UserImpl {
-    private UserApi userApi;
+    private final UserApi userApi;
     private static UserImpl instance;
     private static final String KEY_TOKEN = "user_token";  // token的存储键名
 

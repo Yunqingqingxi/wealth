@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 夜间模式的 TextInputLayout 样式 -->
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/purple_200</item>
+        <item name="hintTextColor">@color/purple_200</item>
+        <item name="android:textColorHint">@color/purple_200</item>
+    </style>
+</resources> 

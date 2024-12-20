@@ -1,10 +1,12 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
+
+import com.example.wealth.presentation.R;
 
 public class ProfileFragment extends Fragment {
 

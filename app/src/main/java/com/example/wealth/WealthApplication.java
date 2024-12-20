@@ -1,6 +1,7 @@
 package com.example.wealth;
 
 import android.app.Application;
+import androidx.appcompat.app.AppCompatDelegate;
 import com.example.wealth.network.RetrofitClient;
 import com.example.wealth.common.utils.CacheUtils;
 import com.example.wealth.common.utils.LogUtils;
@@ -11,6 +12,8 @@ public class WealthApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // 强制使用浅色主题
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         instance = this;
         initializeComponents();
     }

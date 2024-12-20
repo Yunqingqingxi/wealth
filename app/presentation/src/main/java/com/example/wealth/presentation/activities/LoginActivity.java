@@ -1,4 +1,4 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ import com.example.financeuser.UserImpl;
 import com.example.wealth.network.model.BaseResponse;
 import com.example.wealth.network.model.request.LoginRequest;
 import com.example.wealth.network.model.response.TokenInfo;
+import com.example.wealth.presentation.MainActivity;
 import com.example.wealth.presentation.databinding.ActivityLoginBinding;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;

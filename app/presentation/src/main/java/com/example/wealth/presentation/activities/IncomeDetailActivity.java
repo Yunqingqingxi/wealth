@@ -1,4 +1,4 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,24 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ExpenseDetailActivity extends AppCompatActivity {
+import com.example.wealth.presentation.R;
+
+public class IncomeDetailActivity extends AppCompatActivity {
     
-    private RecyclerView rvExpenseList;
+    private RecyclerView rvIncomeList;
     private View btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expense_detail);
+        setContentView(R.layout.activity_income_detail);
 
         setupViews();
         setupListeners();
     }
 
     private void setupViews() {
-        rvExpenseList = findViewById(R.id.rv_expense_list);
+        rvIncomeList = findViewById(R.id.rv_income_list);
         btnBack = findViewById(R.id.btn_back);
-        rvExpenseList.setLayoutManager(new LinearLayoutManager(this));
+        rvIncomeList.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void setupListeners() {

@@ -1,4 +1,4 @@
-package com.example.wealth.presentation;
+package com.example.wealth.presentation.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,13 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wealth.presentation.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.example.wealth.presentation.adapter.TransactionAdapter;
 import com.example.wealth.presentation.model.Transaction;
-import com.example.wealth.presentation.IncomeDetailActivity;
-import com.example.wealth.presentation.ExpenseDetailActivity;
+import com.example.wealth.presentation.activities.IncomeDetailActivity;
+import com.example.wealth.presentation.activities.ExpenseDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;

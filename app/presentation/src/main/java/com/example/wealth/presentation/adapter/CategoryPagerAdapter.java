@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.wealth.presentation.ExpenseCategoryFragment;
-import com.example.wealth.presentation.IncomeCategoryFragment;
+import com.example.wealth.presentation.fragments.ExpenseCategoryFragment;
+import com.example.wealth.presentation.fragments.IncomeCategoryFragment;
 
 public class CategoryPagerAdapter extends FragmentStateAdapter {
 
