@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 金额显示 -->
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="0.00"
+        android:textColor="#000000"
+        android:textSize="32sp" />
+
+    <!-- 备注输入 -->
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="备注：点击填写备注"
+        android:padding="16dp"
+        android:textSize="14sp" />
+
+    <!-- 数字键盘 -->
+    <LinearLayout
+        android:id="@+id/keypad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 第一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+            <TextView style="@style/NumberKeyStyle" android:text="7" />
+            <TextView style="@style/NumberKeyStyle" android:text="8" />
+            <TextView style="@style/NumberKeyStyle" android:text="9" />
+            <LinearLayout
+                style="@style/NumberKeyStyle"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginEnd="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今天"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第二行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+            <TextView style="@style/NumberKeyStyle" android:text="4" />
+            <TextView style="@style/NumberKeyStyle" android:text="5" />
+            <TextView style="@style/NumberKeyStyle" android:text="6" />
+            <TextView style="@style/NumberKeyStyle" android:text="+" />
+        </LinearLayout>
+
+        <!-- 第三行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+            <TextView style="@style/NumberKeyStyle" android:text="1" />
+            <TextView style="@style/NumberKeyStyle" android:text="2" />
+            <TextView style="@style/NumberKeyStyle" android:text="3" />
+            <TextView style="@style/NumberKeyStyle" android:text="-" />
+        </LinearLayout>
+
+        <!-- 第四行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+            <TextView style="@style/NumberKeyStyle" android:text="." />
+            <TextView style="@style/NumberKeyStyle" android:text="0" />
+            <ImageView
+                android:id="@+id/btn_backspace"
+                style="@style/NumberKeyStyle"
+                android:src="@drawable/ic_backspace"
+                android:padding="12dp"/>
+            <TextView 
+                android:id="@+id/btn_complete"
+                style="@style/NumberKeyStyle" 
+                android:text="完成"
+                android:background="@color/background_yellow"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout> 

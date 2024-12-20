@@ -1,18 +1,19 @@
 package com.example.wealth.presentation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import android.widget.ImageView;
+
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.FrameLayout;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayout navDetail, navChart, navDiscover, navProfile;
-    private ImageView ivDetail, ivChart, ivDiscover, ivProfile;
-    private TextView tvDetail, tvChart, tvDiscover, tvProfile;
+    private FrameLayout navAdd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +37,7 @@ public class MainActivity extends AppCompatActivity {
         navChart = findViewById(R.id.nav_chart);
         navDiscover = findViewById(R.id.nav_discover);
         navProfile = findViewById(R.id.nav_profile);
-
-        ivDetail = findViewById(R.id.iv_detail);
-        ivChart = findViewById(R.id.iv_chart);
-        ivDiscover = findViewById(R.id.iv_discover);
-        ivProfile = findViewById(R.id.iv_profile);
-
-        tvDetail = findViewById(R.id.tv_detail);
-        tvChart = findViewById(R.id.tv_chart);
-        tvDiscover = findViewById(R.id.tv_discover);
-        tvProfile = findViewById(R.id.tv_profile);
+        navAdd = findViewById(R.id.nav_add);
     }
 
     private void setupListeners() {
@@ -76,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.fragment_container, new ProfileFragment())
                     .commit();
         });
+
+        navAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AddRecordActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 
     private void updateNavSelection(View selectedNav) {
@@ -88,4 +87,6 @@ public class MainActivity extends AppCompatActivity {
         // 设置选中项
         selectedNav.setSelected(true);
     }
+
+
 }

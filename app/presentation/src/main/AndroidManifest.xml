@@ -5,15 +5,20 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.Wealth">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="true" />
-        
-
-        
-
+        <activity
+            android:name=".IncomeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpenseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddRecordActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

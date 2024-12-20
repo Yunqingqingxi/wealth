@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -34,11 +35,16 @@
 
         <!-- 左侧日期 -->
         <LinearLayout
+            android:id="@+id/date_picker_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
 
             <TextView
+                android:id="@+id/tv_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2024年"
@@ -52,6 +58,7 @@
                 android:layout_marginTop="4dp">
 
                 <TextView
+                    android:id="@+id/year_month_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12月"
@@ -59,13 +66,12 @@
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" ▼"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:layout_marginStart="4dp"/>
+                    android:src="@drawable/ic_arrow_down"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center_vertical"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -76,37 +82,46 @@
             android:background="#CCCCCC"
             android:layout_marginHorizontal="16dp"/>
 
-        <!-- 收入 -->
+        <!-- 收入区域 -->
         <LinearLayout
+            android:id="@+id/income_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            tools:ignore="TouchTargetSizeCheck">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="收入"
                 android:textColor="#666666"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvIncome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="0.00"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- 右侧支出 -->
+        <!-- 右侧支出区域 -->
         <LinearLayout
+            android:id="@+id/expense_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="24dp">
+            android:layout_marginStart="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
 
             <TextView
                 android:layout_width="wrap_content"
